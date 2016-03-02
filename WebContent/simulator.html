@@ -7,6 +7,7 @@
 <title>Test Console</title>
 </head>
 <body>
+<div id="canvas-container"></div>
 <div class="game-panel">
 	<div class="game-display" style="width: 200px;height:50px;border-width: 1px;border-color: blach;border-style: solid;margin-bottom: 10px;">
 		<span class="skill-result"></span>
@@ -14,20 +15,20 @@
 	<div class="skill-panel" id="control-panel">
 	</div>
 </div>
-<div id="qunit"></div>
-<div id="qunit-fixture"></div>
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.0/amplify.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/qunit/1.14.0/qunit.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
 <script src="./lib/js/utils.js"></script>
 <script src="./lib/js/data.js"></script>
 <script src="./lib/js/skill-panel.js"></script>
 <script src="./lib/js/controller.js"></script>
-<!--  
-<script src="./lib/test/test-data.js"></script>
+<script src="./lib/js/game/fight.js"></script>
 
-<script src="./lib/test/test-utils.js"></script>
-<script src="./lib/test/test-skill-panel.js"></script>
--->
+<script>
+var paper = Raphael("canvas-container", 320, 200);
+var shape = paper.path("M 50 50 l 150 0 a150,25 0 0,1 0,15 l -150 0 a150,25 0 0,1 0,-15 z");
+shape.attr("fill","green");
+</script>
 </body>
 </html>

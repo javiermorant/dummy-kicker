@@ -1,9 +1,10 @@
-var punch=function(src, target){
-	target.hp=target.hp-src.ap;
-};
-var kick=function(src, target){
-	target.hp=target.hp-src.ap*2;
-};
+
+//var punch=function(src, target){
+//	target.hp=target.hp-src.ap;
+//};
+//var kick=function(src, target){
+//	target.hp=target.hp-src.ap*2;
+//};
 
 var Fighter= function(params){
 	var hp=params.hp;
